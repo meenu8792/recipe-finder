@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Recipe Finder</title>
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="p-4 flex justify-center">
+
+  <div class="container bg-white bg-opacity-95 p-8 rounded-2xl shadow-xl max-w-5xl w-full text-center my-8">
+
+    <h1 class="text-5xl font-bold text-blue-800 mb-8">
+      Delicious Recipes
+    </h1>
+
+    <!-- Search -->
+    <div class="mb-8 flex flex-col sm:flex-row gap-4 justify-center items-center">
+      <input id="searchInput" type="text"
+        placeholder="Search by ingredient, dish, or cuisine..."
+        class="flex-grow p-4 border rounded-lg">
+
+      <button id="searchBtn"
+        class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg">
+        Search Recipes
+      </button>
+
+      <button id="randomBtn"
+        class="bg-purple-600 hover:bg-purple-700 text-white px-8 py-4 rounded-lg">
+        Random Recipes
+      </button>
+
+      <button id="favBtn"
+        class="bg-red-500 hover:bg-red-600 text-white px-6 py-4 rounded-lg">
+        ❤️ Favorites
+      </button>
+    </div>
+
+    <!-- Loading -->
+    <div id="loading" class="hidden text-blue-600 font-medium mb-4">
+      Loading recipes...
+    </div>
+
+    <!-- Error -->
+    <div id="error" class="hidden text-red-600 font-semibold mb-4"></div>
+
+    <!-- Recipes -->
+    <div id="recipeResults"
+      class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-8">
+    </div>
+
+    <!-- No Results -->
+    <div id="noResults" class="hidden text-gray-600 text-xl mt-8">
+      No recipes found.
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
